@@ -1,0 +1,305 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Jost", sans-serif;
+   
+  }
+  .theme{
+    background-color: transparent;
+    margin-right:50px;
+  }
+  .dark-mode{
+    background:url(https://media.istockphoto.com/photos/dark-stormy-sea-with-a-dramatic-cloudy-sky-picture-id1281863832?b=1&k=20&m=1281863832&s=170667a&w=0&h=IYWjnFYkBtYIMB5gO7kyt_JOQ8SJ1kwG8DNU0iH11LM=) ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  body {
+    background:url(https://cdn.wallpapersafari.com/24/71/GqsI8h.jpg);
+    display: flex;
+   color:black;
+   height:100%;
+   background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+     /* height:calc(100vh - 40px); */
+    width: 100vw;
+    font-family: "Jost", sans-serif;
+  }
+  
+  html {
+    font-size: 100%;
+    font-weight: bolder;
+    height: 100%;
+    /* color:rgb(64, 106, 184); */
+    background: #eee;
+  }
+  
+ 
+  
+  .box {
+    border:2px solid black;
+    width: 45vw;
+    height:85vh;
+    /* height:calc(100vh - 40px); */
+    border-radius: 0.5rem;
+    /* box-shadow: 0 0.8rem 5rem rgba(0, 0, 0, 0.2); */
+    box-shadow:  0 4px 8000px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* //background: #1aa6c9; */
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    min-width: 20rem;
+    min-height: 35rem;
+    justify-content: center;
+    background: FDAE01;
+   
+  }
+  
+  .wave {
+    opacity: 0.3;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    background:rgb(175, 209, 231);
+    width: 50rem;
+    height: 50rem;
+    margin-left: -25rem;
+    margin-top: -20rem;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+    z-index: 1;
+  }
+  
+  .wave.-three {
+    animation: drift 7000ms infinite linear;
+    z-index: 2 !important;
+    opacity: 0.2;
+  }
+  
+  .wave.-two {
+    animation: drift 7000ms infinite linear;
+    opacity: 0.1;
+    z-index: 3 !important;
+  }
+  
+  .box::after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  @keyframes drift {
+    from {
+      transform: rotate(0deg);
+    }
+    from {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .info {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 80vh;
+    z-index: 4;
+  }
+  .temp1{
+    display: flex;
+  }
+  .temp1 div{
+    justify-content: center;
+    /* font-weight: 100; */
+    font-size: 3rem;
+  }
+  .content{
+    margin-top: 70px !important;
+    margin-bottom:30px  !important;
+    justify-content: space-around;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+  }
+  .location {
+    /* color:black; */
+    /* margin-top: -0.5rem; */
+    text-align: center;
+    /* font-weight: 800;  */
+       font-size: 3rem; 
+    text-transform: capitalize;
+  }
+  .theme
+  {
+    border-radius:50%;
+    width:50px;
+    height:50px;
+    cursor:pointer;
+    
+
+  }
+  .fa-street-view {
+    animation: rotates 3s linear infinite ease;
+  }
+  
+  @keyframes rotates {
+    from {
+      transform: translateX(-0.5rem);
+    }
+    from {
+      transform: translateX(0.5rem);
+    }
+  }
+  
+
+  #date {
+    text-align: center;
+    margin-top: 0.5rem;
+    color:gray;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .colorChange{
+    color:rgb(214, 217, 219);
+    /* margin-top: 2.5rem; */
+    
+    font-size: 3rem;
+ 
+    margin-top: 0.3rem;
+    font-weight: 500;
+    font-size: 2.4rem;
+    
+    text-align: center;
+    
+
+  }
+  
+  .temp {
+    /* margin-top: 0.05rem; */
+    text-align: center;
+    font-size: 3rem;
+  }
+  
+  .tempmin_max {
+    text-align: center;
+    margin-top: 1.3rem;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color:gray;
+  }
+  
+  #weathercon {
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+  }
+  
+  #weathercon .fas {
+    font-size: 6rem;
+    animation: fas-anime 3s linear infinite alternate;
+  }
+  
+  @keyframes fas-anime {
+    from {
+      transform: scale(1.1);
+    }
+    to {
+      transform: scale(1.5);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .box {
+      width: 90vw;
+      height: 80vh;
+    }
+  
+    .wave {
+      top: 85%;
+    }
+  
+    #weathercon {
+      font-size: 5em;
+    }
+  
+    .info {
+      font-size: 1.5em;
+    }
+  }
+  @media(max-height:450px)
+  {
+.location{
+  padding:0px;
+  margin-bottom:0px;
+}
+.temp{
+  margin-top:0px;
+  padding:0px;
+}
+  }
+  
+  @media (max-width: 500px) {
+    .box {
+      height: 80vh;
+    }
+  
+    .wave {
+      top: 115%;
+    }
+  }
+  .h1{
+    font-weight: lighter;
+    padding:0px;
+  }
+  .content{
+    padding:0px;
+    font-weight: lighter;
+  }
+  body > span {
+    width: 100vw;
+    text-align: center;
+    color: grey;
+  }
+  
+  .inputData {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .inputField {
+    width: 50%;
+    margin: auto;
+    border-radius: 5rem;
+    padding: 1rem 1rem;
+    outline: none;
+    font-size: 1.5rem;
+  }
+  
+  .errorMsg {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem auto;
+  }
+  
